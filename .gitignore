@@ -6,4 +6,5 @@ static
 icon.ico
 db.sqlite3
 __pychache__
-WebBaxo.sublime-workspace
+WebBaxo.sublime-workspace.coverage
+htmlcov

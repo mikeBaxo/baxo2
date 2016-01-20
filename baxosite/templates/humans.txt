@@ -2,14 +2,15 @@
 # The humans responsible & technology colophon
 
 # TEAM
-
-    <name> -- <role> -- <twitter>
+    
+    One man army (Mike) -- DEV and CIT [:] -- mada86@gmail.com
 
 # THANKS
-
-    <name>
+    
+    To all peoples whom got here
 
 # TECHNOLOGY COLOPHON
 
+    Python, Django
     HTML5, CSS3
-    jQuery, Modernizr
+    AngularJS, jQuery

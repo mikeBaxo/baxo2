@@ -1,2 +1,35 @@
 {% extends "base.html" %}
-{% block head_title %}BaxoSite Django Tutorial{% endblock %}
+{% load i18n %}
+{% load tz %}
+{% load l10n %}
+
+
+{% block head_title %}BaxoSite Django{% endblock %}
+
+{% block content %}
+    <div class="jumbotron">
+        <div class="container">
+        <h1>{% trans "Welcome to BaxoSite" %}</h1>
+        <p>{% blocktrans %}Baxo site is a simple site that helps you find powertools parts you need</br>If you need any just go ahead to our eshop find right tool and choose parts you need {% endblocktrans %}</p>
+        <p><a class="btn btn-primary btn-lg" role="button"> Learn more &raquo;</a>
+        </p>
+        <div class="col-md-4">
+            <h2 id="local-date">{{today}}</h2>
+            <p>This is the time using your local information </p>
+            <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
+        </div>
+        <div class="col-md-4">
+            <h2 id="non-local-date">{{today|unlocalize}}</h2>
+            <p>This is the default time format.</p>
+            <p><a class="btn btn-default" href="#" role="buton">View details &raquo;</a></p>
+        </div>
+        <div class="col-md-4">
+            <h2>Time Zones</h2>
+            <p> Warsaw: <span id="time-tz">{{now|time:"H:i"}}</span></p>
+            <p> UTC: <span id="time-utc">{{now|utc|time:"H:i"}}</span></p>
+            <p> New York: <span id="time-ny">{{now|timezone:"America/New_York"|time:"H:i"}}</span></p>
+            <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
+        </div>
+        </div>
+    </div>
+{% endblock %}
